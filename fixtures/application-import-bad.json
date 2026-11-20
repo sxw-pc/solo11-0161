@@ -1,0 +1,4 @@
+{"events":[
+{"id":"A2","kind":"household","household_id":"family-b","community":"ward-a","applied_at":"2026-04-01T10:00:00","residence_from":"2020-01-01T00:00:00","version":1},
+{"id":"M3","kind":"member","person_id":"person-a","household_id":"family-b","relation":"applicant","joined_at":"2020-01-01T00:00:00"}
+]}

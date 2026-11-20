@@ -1,0 +1,8 @@
+{"events":[
+{"id":"A1","kind":"household","household_id":"family-a","community":"ward-a","applied_at":"2026-04-01T09:00:00","residence_from":"2020-01-01T00:00:00","version":1},
+{"id":"M1","kind":"member","person_id":"person-a","household_id":"family-a","relation":"applicant","joined_at":"2020-01-01T00:00:00"},
+{"id":"M2","kind":"member","person_id":"person-b","household_id":"family-a","relation":"child","joined_at":"2020-01-01T00:00:00"},
+{"id":"D1","kind":"document","household_id":"family-a","doc_kind":"identity","subject":"person-a","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:10:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"},
+{"id":"D2","kind":"document","household_id":"family-a","doc_kind":"residence","subject":"family-a","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:20:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"},
+{"id":"D3","kind":"document","household_id":"family-a","doc_kind":"relation","subject":"family-a","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:30:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"}
+]}
