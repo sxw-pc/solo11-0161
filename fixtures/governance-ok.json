@@ -1,0 +1,1 @@
+{"events":[{"id":"MEET-1","kind":"meeting","community":"ward-a","opens":"2026-04-02T00:00:00","closes":"2026-04-05T00:00:00","title":"courtyard hours"},{"id":"VOTE-1","kind":"ballot","meeting_id":"MEET-1","household_id":"family-a","at":"2026-04-03T10:00:00","choice":"yes","signer":"person-a"}]}
