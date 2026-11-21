@@ -10,3 +10,5 @@ python -m unittest discover -s tests -v
 ```
 
 三个独立入口为 `application-import`、`eligibility-import`、`allocation-import`，可用 `--file fixtures/*-ok.json` 或对应 `*-bad.json`。`report` 给出申请、资格、队列、房源、邀约与签约；`audit` 从原始文件在新库重放比对。所有家庭和房源纯属合成，不对接真实人口、税务或不动产系统；角色和签名只是离线标签。
+
+隔离增强副本另有 `facility-import`，记录社区公共房间和已安置家庭的单次预约。当前只按房间容量和整段时间冲突裁决；`fixtures/facility-ok.json` 可在 demo 后导入。

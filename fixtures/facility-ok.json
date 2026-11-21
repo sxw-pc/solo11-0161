@@ -1,0 +1,1 @@
+{"events":[{"id":"FR1","kind":"facility_room","community":"ward-a","capacity":10,"accessible":true},{"id":"FB1","kind":"facility_booking","household_id":"family-a","room_id":"FR1","starts":"2026-04-03T10:00:00","ends":"2026-04-03T11:00:00","attendees":4}]}
