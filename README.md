@@ -10,3 +10,5 @@ python -m unittest discover -s tests -v
 ```
 
 三个独立入口为 `application-import`、`eligibility-import`、`allocation-import`，可用 `--file fixtures/*-ok.json` 或对应 `*-bad.json`。`report` 给出申请、资格、队列、房源、邀约与签约；`audit` 从原始文件在新库重放比对。所有家庭和房源纯属合成，不对接真实人口、税务或不动产系统；角色和签名只是离线标签。
+
+本独立增强副本增加 `power-import`，记录已分配房源的瞬时用电读数。`power_demand` 目前只汇总每套已分配房源的最新读数；`fixtures/power-ok.json` 可在 demo 后导入。
