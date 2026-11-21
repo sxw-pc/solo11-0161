@@ -1,0 +1,1 @@
+{"events":[{"id":"VAN-1","kind":"shuttle_vehicle","seats":4,"wheelchair_places":1},{"id":"TRIP-1","kind":"shuttle_request","household_id":"family-a","vehicle_id":"VAN-1","from_at":"2026-04-03T10:00:00","to_at":"2026-04-03T11:00:00","seats":2,"wheelchair":false}]}

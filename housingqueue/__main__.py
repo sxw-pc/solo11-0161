@@ -4,11 +4,12 @@ import json
 from pathlib import Path
 from .store import connect
 from .source import read_file,ingest
-from . import application,eligibility,allocation,report
+from . import application,eligibility,allocation,shuttle,report
 HANDLERS={
  'application-import':{'household':application.household,'member':application.member,'document':application.document,'revoke_document':application.revoke_document},
  'eligibility-import':{'income':eligibility.income,'property':eligibility.property,'objection':eligibility.object,'resolve':eligibility.resolve},
  'allocation-import':{'unit':allocation.unit,'offer':allocation.offer,'sign':allocation.sign,'expire':allocation.expire},
+ 'shuttle-import':{'shuttle_vehicle':shuttle.vehicle,'shuttle_request':shuttle.request},
 }
 def import_file(db,command,path):
     raw,events=read_file(path);results=[]
