@@ -10,3 +10,5 @@ python -m unittest discover -s tests -v
 ```
 
 三个独立入口为 `application-import`、`eligibility-import`、`allocation-import`，可用 `--file fixtures/*-ok.json` 或对应 `*-bad.json`。`report` 给出申请、资格、队列、房源、邀约与签约；`audit` 从原始文件在新库重放比对。所有家庭和房源纯属合成，不对接真实人口、税务或不动产系统；角色和签名只是离线标签。
+
+隔离增强素材还提供 `rent-import`：可对已签邀约导入租约、月账单和收款，`rent_decision` 目前只汇总总应收与总收款，未分配到具体月份。可用 `fixtures/rent-ok.json` 在 demo 后导入并通过 `report`、`audit` 查看。

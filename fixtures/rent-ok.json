@@ -1,0 +1,1 @@
+{"events":[{"id":"R1","kind":"rent_contract","offer_id":"O1","monthly_cents":1000,"starts":"2026-04-01"},{"id":"RI1","kind":"rent_invoice","contract_id":"R1","month":"2026-04","amount_cents":1000},{"id":"RP1","kind":"rent_receipt","contract_id":"R1","at":"2026-04-03","amount_cents":600}]}
