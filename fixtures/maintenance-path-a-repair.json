@@ -1,0 +1,11 @@
+{"events":[
+{"id":"DF1","kind":"defect_report","unit_id":"U1","reported_at":"2026-04-08T09:00:00","reporter":"family-a","summary":"mains water supply defect; no safe running water"},
+{"id":"IN1","kind":"inspection","unit_id":"U1","defect_id":"DF1","at":"2026-04-08T15:00:00","inspector":"independent-inspector","verdict":"uninhabitable","evidence":"inspection-U1-water-20260408.pdf"},
+{"id":"DC1","kind":"decommission","unit_id":"U1","defect_id":"DF1","inspection_id":"IN1","effective_from":"2026-04-09T00:00:00","decided_at":"2026-04-08T17:00:00","authority":"housing-center"},
+{"id":"TP1","kind":"temporary_placement","household_id":"family-a","swing_unit_id":"U3","original_unit_id":"U1","from_at":"2026-04-09T08:00:00","planned_to_at":"2026-04-20T08:00:00"},
+{"id":"WO1","kind":"work_order","unit_id":"U1","opened_at":"2026-04-09T10:00:00","crew":"water-works-crew","required_by":"2026-04-15T18:00:00"},
+{"id":"RC1","kind":"repair_complete","work_order_id":"WO1","at":"2026-04-14T16:00:00"},
+{"id":"RI1","kind":"reinspect","work_order_id":"WO1","unit_id":"U1","at":"2026-04-15T10:00:00","inspector":"independent-inspector","passed":true,"evidence":"reinspection-U1-pass-20260415.pdf"},
+{"id":"RS1","kind":"return_to_service","unit_id":"U1","at":"2026-04-15T14:00:00"},
+{"id":"RO1","kind":"reoccupy","placement_id":"TP1","at":"2026-04-16T09:00:00"}
+]}

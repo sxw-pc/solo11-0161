@@ -1,0 +1,9 @@
+{"events":[
+{"id":"DF1","kind":"defect_report","unit_id":"U1","reported_at":"2026-04-08T09:00:00","reporter":"family-a","summary":"mains water supply defect; no safe running water"},
+{"id":"IN1","kind":"inspection","unit_id":"U1","defect_id":"DF1","at":"2026-04-08T15:00:00","inspector":"independent-inspector","verdict":"uninhabitable","evidence":"inspection-U1-water-20260408.pdf"},
+{"id":"DC1","kind":"decommission","unit_id":"U1","defect_id":"DF1","inspection_id":"IN1","effective_from":"2026-04-09T00:00:00","decided_at":"2026-04-08T17:00:00","authority":"housing-center"},
+{"id":"TP1","kind":"temporary_placement","household_id":"family-a","swing_unit_id":"U3","original_unit_id":"U1","from_at":"2026-04-09T08:00:00","planned_to_at":"2026-04-25T08:00:00"},
+{"id":"IN2","kind":"inspection","unit_id":"U1","defect_id":"DF1","at":"2026-04-12T10:00:00","inspector":"third-party-surveyor","verdict":"long_term_uninhabitable","evidence":"survey-U1-structural-water-20260412.pdf"},
+{"id":"PR1","kind":"replacement_pledge","household_id":"family-a","original_unit_id":"U1","replacement_unit_id":"U2","inspection_id":"IN2","consent_ref":"consent-family-a-20260412","pledged_at":"2026-04-13T10:00:00"},
+{"id":"PH1","kind":"replacement_handover","pledge_id":"PR1","at":"2026-04-15T10:00:00","handover_ref":"handover-U2-family-a-20260415"}
+]}

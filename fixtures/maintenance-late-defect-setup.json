@@ -1,0 +1,4 @@
+{"events":[
+{"id":"U4","kind":"unit","community":"ward-a","rooms":1,"accessible":false,"available_at":"2026-04-01T11:00:00","usage":"normal"},
+{"id":"LO1","kind":"offer","household_id":"family-c","unit_id":"U4","offered_at":"2026-04-03T12:00:00","expires_at":"2026-04-10T12:00:00"}
+]}

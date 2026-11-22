@@ -1,0 +1,9 @@
+{"events":[
+{"id":"LDF1","kind":"defect_report","unit_id":"U4","reported_at":"2026-04-02T09:00:00","reporter":"building-inspection","summary":"pipe corrosion discovered in retrospective inspection"},
+{"id":"LIN1","kind":"inspection","unit_id":"U4","defect_id":"LDF1","at":"2026-04-09T15:00:00","inspector":"independent-inspector","verdict":"uninhabitable","evidence":"inspection-U4-late-20260409.pdf"},
+{"id":"LDC1","kind":"decommission","unit_id":"U4","defect_id":"LDF1","inspection_id":"LIN1","effective_from":"2026-04-02T12:00:00","decided_at":"2026-04-09T17:00:00","authority":"housing-center"},
+{"id":"LDF2","kind":"defect_report","unit_id":"U1","reported_at":"2026-04-01T20:00:00","reporter":"building-inspection","summary":"water ingress evidence pre-dating signed move-in"},
+{"id":"LIN2","kind":"inspection","unit_id":"U1","defect_id":"LDF2","at":"2026-04-09T16:00:00","inspector":"independent-inspector","verdict":"uninhabitable","evidence":"inspection-U1-late-20260409.pdf"},
+{"id":"LDC2","kind":"decommission","unit_id":"U1","defect_id":"LDF2","inspection_id":"LIN2","effective_from":"2026-04-01T21:00:00","decided_at":"2026-04-09T18:00:00","authority":"housing-center"},
+{"id":"LTP1","kind":"temporary_placement","household_id":"family-a","swing_unit_id":"U3","original_unit_id":"U1","from_at":"2026-04-10T08:00:00","planned_to_at":"2026-04-20T08:00:00"}
+]}

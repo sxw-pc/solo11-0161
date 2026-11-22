@@ -4,11 +4,15 @@ import json
 from pathlib import Path
 from .store import connect
 from .source import read_file,ingest
-from . import application,eligibility,allocation,report
+from . import application,eligibility,allocation,maintenance,report
 HANDLERS={
  'application-import':{'household':application.household,'member':application.member,'document':application.document,'revoke_document':application.revoke_document},
  'eligibility-import':{'income':eligibility.income,'property':eligibility.property,'objection':eligibility.object,'resolve':eligibility.resolve},
  'allocation-import':{'unit':allocation.unit,'offer':allocation.offer,'sign':allocation.sign,'expire':allocation.expire},
+ 'maintenance-import':{'defect_report':maintenance.defect_report,'inspection':maintenance.inspection,'decommission':maintenance.decommission,
+   'work_order':maintenance.work_order,'repair_complete':maintenance.repair_complete,'reinspect':maintenance.reinspect,
+   'return_to_service':maintenance.return_to_service,'temporary_placement':maintenance.temporary_placement,'reoccupy':maintenance.reoccupy,
+   'replacement_pledge':maintenance.replacement_pledge,'replacement_handover':maintenance.replacement_handover},
 }
 def import_file(db,command,path):
     raw,events=read_file(path);results=[]

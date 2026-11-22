@@ -1,0 +1,16 @@
+{"events":[
+{"id":"MA1","kind":"household","household_id":"family-a","community":"ward-a","applied_at":"2026-04-01T09:00:00","residence_from":"2020-01-01T00:00:00","version":1},
+{"id":"MM1","kind":"member","person_id":"person-a1","household_id":"family-a","relation":"applicant","joined_at":"2020-01-01T00:00:00"},
+{"id":"MM2","kind":"member","person_id":"person-a2","household_id":"family-a","relation":"child","joined_at":"2020-01-01T00:00:00"},
+{"id":"MD1","kind":"document","household_id":"family-a","doc_kind":"identity","subject":"person-a1","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:10:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"},
+{"id":"MD2","kind":"document","household_id":"family-a","doc_kind":"residence","subject":"family-a","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:20:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"},
+{"id":"MD3","kind":"document","household_id":"family-a","doc_kind":"relation","subject":"family-a","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:30:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"},
+{"id":"MB1","kind":"household","household_id":"family-b","community":"ward-a","applied_at":"2026-04-01T09:05:00","residence_from":"2020-01-01T00:00:00","version":1},
+{"id":"MM3","kind":"member","person_id":"person-b1","household_id":"family-b","relation":"applicant","joined_at":"2020-01-01T00:00:00"},
+{"id":"MM4","kind":"member","person_id":"person-b2","household_id":"family-b","relation":"spouse","joined_at":"2020-01-01T00:00:00"},
+{"id":"MM5","kind":"member","person_id":"person-b3","household_id":"family-b","relation":"child","joined_at":"2020-01-01T00:00:00"},
+{"id":"MM6","kind":"member","person_id":"person-b4","household_id":"family-b","relation":"parent","joined_at":"2020-01-01T00:00:00"},
+{"id":"MD4","kind":"document","household_id":"family-b","doc_kind":"identity","subject":"person-b1","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:40:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"},
+{"id":"MD5","kind":"document","household_id":"family-b","doc_kind":"residence","subject":"family-b","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:41:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"},
+{"id":"MD6","kind":"document","household_id":"family-b","doc_kind":"relation","subject":"family-b","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:42:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"}
+]}
