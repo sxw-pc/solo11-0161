@@ -1,0 +1,34 @@
+{
+ "events": [
+  {
+   "id": "U-H2",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": true,
+   "available_at": "2026-01-07T09:00:00"
+  },
+  {
+   "id": "O-H2",
+   "kind": "offer",
+   "household_id": "H2",
+   "unit_id": "U-H2",
+   "offered_at": "2026-01-07T10:00:00",
+   "expires_at": "2026-01-08T10:00:00"
+  },
+  {
+   "id": "S-H2",
+   "kind": "sign",
+   "offer_id": "O-H2",
+   "at": "2026-01-07T11:00:00",
+   "signer": "person-h2"
+  },
+  {
+   "id": "DL-H2",
+   "kind": "deliver",
+   "offer_id": "O-H2",
+   "at": "2026-01-09T09:00:00",
+   "receiver": "person-h2"
+  }
+ ]
+}

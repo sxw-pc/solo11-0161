@@ -1,0 +1,239 @@
+{
+ "events": [
+  {
+   "id": "V1",
+   "kind": "shuttle_vehicle",
+   "seats": 4,
+   "wheelchair_places": 1
+  },
+  {
+   "id": "garage",
+   "kind": "place"
+  },
+  {
+   "id": "h1-door",
+   "kind": "place"
+  },
+  {
+   "id": "hospital",
+   "kind": "place"
+  },
+  {
+   "id": "h2-door",
+   "kind": "place"
+  },
+  {
+   "id": "library",
+   "kind": "place"
+  },
+  {
+   "id": "ST-GARAGE",
+   "kind": "stop",
+   "place_id": "garage"
+  },
+  {
+   "id": "ST-H1",
+   "kind": "stop",
+   "place_id": "h1-door"
+  },
+  {
+   "id": "ST-HOSP",
+   "kind": "stop",
+   "place_id": "hospital"
+  },
+  {
+   "id": "ST-H2",
+   "kind": "stop",
+   "place_id": "h2-door"
+  },
+  {
+   "id": "ST-LIB",
+   "kind": "stop",
+   "place_id": "library"
+  },
+  {
+   "id": "RG-1",
+   "kind": "segment",
+   "from_place": "garage",
+   "to_place": "h1-door",
+   "minutes": 10
+  },
+  {
+   "id": "RG-2",
+   "kind": "segment",
+   "from_place": "h1-door",
+   "to_place": "hospital",
+   "minutes": 20
+  },
+  {
+   "id": "RG-3",
+   "kind": "segment",
+   "from_place": "garage",
+   "to_place": "h2-door",
+   "minutes": 5
+  },
+  {
+   "id": "RG-4",
+   "kind": "segment",
+   "from_place": "h2-door",
+   "to_place": "library",
+   "minutes": 15
+  },
+  {
+   "id": "RG-5",
+   "kind": "segment",
+   "from_place": "library",
+   "to_place": "h1-door",
+   "minutes": 20
+  },
+  {
+   "id": "RG-6",
+   "kind": "segment",
+   "from_place": "hospital",
+   "to_place": "h2-door",
+   "minutes": 20
+  },
+  {
+   "id": "RG-7",
+   "kind": "segment",
+   "from_place": "h2-door",
+   "to_place": "hospital",
+   "minutes": 20
+  },
+  {
+   "id": "RG-8",
+   "kind": "segment",
+   "from_place": "h1-door",
+   "to_place": "library",
+   "minutes": 20
+  },
+  {
+   "id": "DRV-1",
+   "kind": "driver",
+   "max_drive_minutes": 480,
+   "max_continuous_minutes": 240,
+   "required_rest_minutes": 15
+  },
+  {
+   "id": "SHIFT-1",
+   "kind": "shift",
+   "driver_id": "DRV-1",
+   "vehicle_id": "V1",
+   "starts_at": "2026-05-01T08:30:00",
+   "ends_at": "2026-05-01T13:00:00"
+  },
+  {
+   "id": "WCA-1",
+   "kind": "wheelchair_auth",
+   "household_id": "H1",
+   "granted_at": "2026-04-30T09:00:00"
+  },
+  {
+   "id": "R1",
+   "kind": "ride_request",
+   "vehicle_id": "V1",
+   "shift_id": "SHIFT-1",
+   "driver_id": "DRV-1",
+   "origin_stop": "ST-GARAGE",
+   "starts_at": "2026-05-01T09:00:00",
+   "seats": 4,
+   "wheelchair_places": 1
+  },
+  {
+   "id": "R1-S1",
+   "kind": "ride_stop",
+   "request_id": "R1",
+   "seq": 1,
+   "household_id": "H1",
+   "stop_id": "ST-H1",
+   "stop_kind": "pickup",
+   "earliest": "2026-05-01T09:00:00",
+   "latest": "2026-05-01T09:45:00",
+   "wheelchair": true,
+   "appointment_at": "2026-05-01T09:45:00"
+  },
+  {
+   "id": "R1-S2",
+   "kind": "ride_stop",
+   "request_id": "R1",
+   "seq": 2,
+   "household_id": "H1",
+   "stop_id": "ST-HOSP",
+   "stop_kind": "dropoff",
+   "earliest": "2026-05-01T09:00:00",
+   "latest": "2026-05-01T09:45:00",
+   "wheelchair": true,
+   "appointment_at": "2026-05-01T09:45:00"
+  },
+  {
+   "id": "R1-A1",
+   "kind": "authorization",
+   "request_id": "R1",
+   "household_id": "H1",
+   "window_start": "2026-05-01T09:00:00",
+   "window_end": "2026-05-01T09:45:00",
+   "recorded_by": "H1",
+   "recorded_at": "2026-04-30T10:00:00",
+   "auth_kind": "original"
+  },
+  {
+   "id": "R1-A2",
+   "kind": "authorization",
+   "request_id": "R1",
+   "household_id": "H1",
+   "window_start": "2026-05-01T10:15:00",
+   "window_end": "2026-05-01T10:15:00",
+   "recorded_by": "H1",
+   "recorded_at": "2026-04-30T19:00:00",
+   "auth_kind": "rebook"
+  },
+  {
+   "id": "R1-EX",
+   "kind": "execute",
+   "request_id": "R1",
+   "at": "2026-05-01T08:00:00"
+  },
+  {
+   "id": "R1-SEC",
+   "kind": "secure",
+   "request_id": "R1",
+   "household_id": "H1",
+   "move": "secure",
+   "at": "2026-05-01T09:08:00",
+   "witness_a": "driver",
+   "witness_b": "escort"
+  },
+  {
+   "id": "R1-B1",
+   "kind": "boarding",
+   "request_id": "R1",
+   "household_id": "H1",
+   "stop_seq": 1,
+   "at": "2026-05-01T09:10:00",
+   "witness_a": "driver",
+   "witness_b": "escort",
+   "move": "board"
+  },
+  {
+   "id": "R1-REL",
+   "kind": "secure",
+   "request_id": "R1",
+   "household_id": "H1",
+   "move": "release",
+   "at": "2026-05-01T09:28:00",
+   "witness_a": "driver",
+   "witness_b": "hospital-clerk"
+  },
+  {
+   "id": "R1-B2",
+   "kind": "boarding",
+   "request_id": "R1",
+   "household_id": "H1",
+   "stop_seq": 2,
+   "at": "2026-05-01T09:30:00",
+   "witness_a": "driver",
+   "witness_b": "hospital-clerk",
+   "move": "alight"
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "events": [
+  {
+   "id": "V1",
+   "kind": "shuttle_vehicle",
+   "seats": 4,
+   "wheelchair_places": 1
+  },
+  {
+   "id": "garage",
+   "kind": "place"
+  },
+  {
+   "id": "h1-door",
+   "kind": "place"
+  },
+  {
+   "id": "hospital",
+   "kind": "place"
+  },
+  {
+   "id": "h2-door",
+   "kind": "place"
+  },
+  {
+   "id": "library",
+   "kind": "place"
+  },
+  {
+   "id": "ST-GARAGE",
+   "kind": "stop",
+   "place_id": "garage"
+  },
+  {
+   "id": "ST-H1",
+   "kind": "stop",
+   "place_id": "h1-door"
+  },
+  {
+   "id": "ST-HOSP",
+   "kind": "stop",
+   "place_id": "hospital"
+  },
+  {
+   "id": "ST-H2",
+   "kind": "stop",
+   "place_id": "h2-door"
+  },
+  {
+   "id": "ST-LIB",
+   "kind": "stop",
+   "place_id": "library"
+  },
+  {
+   "id": "RG-1",
+   "kind": "segment",
+   "from_place": "garage",
+   "to_place": "h1-door",
+   "minutes": 10
+  },
+  {
+   "id": "RG-2",
+   "kind": "segment",
+   "from_place": "h1-door",
+   "to_place": "hospital",
+   "minutes": 20
+  },
+  {
+   "id": "RG-3",
+   "kind": "segment",
+   "from_place": "garage",
+   "to_place": "h2-door",
+   "minutes": 5
+  },
+  {
+   "id": "RG-4",
+   "kind": "segment",
+   "from_place": "h2-door",
+   "to_place": "library",
+   "minutes": 15
+  },
+  {
+   "id": "RG-5",
+   "kind": "segment",
+   "from_place": "library",
+   "to_place": "h1-door",
+   "minutes": 20
+  },
+  {
+   "id": "RG-6",
+   "kind": "segment",
+   "from_place": "hospital",
+   "to_place": "h2-door",
+   "minutes": 20
+  },
+  {
+   "id": "RG-7",
+   "kind": "segment",
+   "from_place": "h2-door",
+   "to_place": "hospital",
+   "minutes": 20
+  },
+  {
+   "id": "RG-8",
+   "kind": "segment",
+   "from_place": "h1-door",
+   "to_place": "library",
+   "minutes": 20
+  },
+  {
+   "id": "DRV-1",
+   "kind": "driver",
+   "max_drive_minutes": 480,
+   "max_continuous_minutes": 240,
+   "required_rest_minutes": 15
+  },
+  {
+   "id": "SHIFT-1",
+   "kind": "shift",
+   "driver_id": "DRV-1",
+   "vehicle_id": "V1",
+   "starts_at": "2026-05-01T08:30:00",
+   "ends_at": "2026-05-01T13:00:00"
+  }
+ ]
+}

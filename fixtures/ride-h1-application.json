@@ -1,0 +1,54 @@
+{
+ "events": [
+  {
+   "id": "H1-HH",
+   "kind": "household",
+   "household_id": "H1",
+   "community": "ward-a",
+   "applied_at": "2026-01-05T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "H1-M1",
+   "kind": "member",
+   "person_id": "person-h1",
+   "household_id": "H1",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "H1-identity",
+   "kind": "document",
+   "household_id": "H1",
+   "doc_kind": "identity",
+   "subject": "person-h1",
+   "issued_at": "2026-01-01T00:00:00",
+   "received_at": "2026-01-06T09:00:00",
+   "expires_at": "2027-01-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "H1-residence",
+   "kind": "document",
+   "household_id": "H1",
+   "doc_kind": "residence",
+   "subject": "H1",
+   "issued_at": "2026-01-01T00:00:00",
+   "received_at": "2026-01-06T09:00:00",
+   "expires_at": "2027-01-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "H1-relation",
+   "kind": "document",
+   "household_id": "H1",
+   "doc_kind": "relation",
+   "subject": "H1",
+   "issued_at": "2026-01-01T00:00:00",
+   "received_at": "2026-01-06T09:00:00",
+   "expires_at": "2027-01-01T00:00:00",
+   "issuer": "civic-office"
+  }
+ ]
+}

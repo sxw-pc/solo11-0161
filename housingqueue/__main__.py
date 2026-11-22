@@ -4,12 +4,19 @@ import json
 from pathlib import Path
 from .store import connect
 from .source import read_file,ingest
-from . import application,eligibility,allocation,shuttle,report
+from . import application,eligibility,allocation,shuttle,report,ride_route
 HANDLERS={
  'application-import':{'household':application.household,'member':application.member,'document':application.document,'revoke_document':application.revoke_document},
  'eligibility-import':{'income':eligibility.income,'property':eligibility.property,'objection':eligibility.object,'resolve':eligibility.resolve},
- 'allocation-import':{'unit':allocation.unit,'offer':allocation.offer,'sign':allocation.sign,'expire':allocation.expire},
+ 'allocation-import':{'unit':allocation.unit,'offer':allocation.offer,'sign':allocation.sign,'expire':allocation.expire,'deliver':allocation.deliver},
  'shuttle-import':{'shuttle_vehicle':shuttle.vehicle,'shuttle_request':shuttle.request},
+ 'ride-route-import':{'shuttle_vehicle':shuttle.vehicle,'place':ride_route.place,'stop':ride_route.stop,'segment':ride_route.segment,
+                      'driver':ride_route.driver,'shift':ride_route.shift,'closure':ride_route.closure,
+                      'wheelchair_auth':ride_route.wheelchair_auth,'ride_request':ride_route.request,
+                      'ride_stop':ride_route.request_stop,'authorization':ride_route.authorize,
+                      'hospital_rebook':ride_route.hospital_rebook,'consult':ride_route.consult,
+                      'execute':ride_route.execute,'secure':ride_route.secure,'boarding':ride_route.board,
+                      'delivery':ride_route.delivery,'observe_closure':ride_route.observe_closure},
 }
 def import_file(db,command,path):
     raw,events=read_file(path);results=[]

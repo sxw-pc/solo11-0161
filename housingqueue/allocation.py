@@ -70,6 +70,27 @@ def expire(db,e):
     log(db,'allocation',o['id'],'expired','unit released for next household',e['id'])
     return 'expired'
 
+def deliver(db,e):
+    """Record the physical handover of a signed unit to the household.
+
+    Signing (``sign``) makes a household eligible for the allocation ledger;
+    only delivery changes the set of residents the shuttle may confirm.  The
+    receiver must be the household applicant, and the unit must not have been
+    handed over already.
+    """
+    o=one(db,'SELECT * FROM offer WHERE id=?',(e['offer_id'],))
+    if not o:raise ValueError('unknown offer')
+    if o['state'] not in ('signed','signed_disputed'):raise ValueError('only a signed allocation can be delivered')
+    applicant=one(db,"SELECT id FROM member WHERE household_id=? AND relation='applicant' AND state='active'",(o['household_id'],))
+    if not applicant or e['receiver']!=applicant['id']:raise ValueError('applicant must receive the unit')
+    if e['at']<o['offered_at']:raise ValueError('delivery cannot predate the offer')
+    if one(db,'SELECT 1 FROM housing_delivery WHERE offer_id=?',(o['id'],)):raise ValueError('unit already delivered')
+    db.execute('INSERT INTO housing_delivery(id,offer_id,household_id,unit_id,at,receiver) VALUES(?,?,?,?,?,?)',
+               (e['id'],o['id'],o['household_id'],o['unit_id'],e['at'],e['receiver']))
+    log(db,'allocation',o['id'],'delivered','signed unit handed to resident',e['id'])
+    log(db,'route',o['household_id'],'bookable','housing delivered; shuttle may confirm',e['id'])
+    return 'delivered'
+
 def reconcile_offers(db,household_id):
     eligibility=one(db,'SELECT * FROM eligibility WHERE household_id=? ORDER BY id DESC LIMIT 1',(household_id,))
     if not eligibility or eligibility['state']=='qualified':return
