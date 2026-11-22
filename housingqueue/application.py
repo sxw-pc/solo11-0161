@@ -38,6 +38,22 @@ def revoke_document(db,e):
     db.execute("UPDATE document SET state='revoked' WHERE id=?",(d['id'],))
     return recompute(db,d['household_id'],e['id'])
 
+def applicant_at(db,household_id,at):
+    """Applicant identity as it stood at ``at`` (alias of effective_applicant)."""
+    return effective_applicant(db,household_id,at)
+
+def effective_applicant(db,household_id,at):
+    """The single applicant whose membership was effective at ``at`` (or None).
+
+    ``joined_at`` is checked, so a person joining after a roster deadline is not
+    projected backwards onto the deadline.  ``state`` is the current membership
+    state because the store carries no separate revocation timestamp; a current
+    applicant who joined in time is the one who was effective in time.
+    """
+    members=many(db,"SELECT * FROM member WHERE household_id=? AND relation='applicant' AND state='active' AND joined_at<=? ORDER BY joined_at,id",(household_id,at))
+    if len(members)!=1:return None
+    return members[0]['id']
+
 def recompute(db,household_id,event_id=None):
     h=one(db,'SELECT * FROM household WHERE id=?',(household_id,))
     if not h:raise ValueError('unknown household')

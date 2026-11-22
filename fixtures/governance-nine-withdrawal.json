@@ -1,0 +1,17 @@
+{
+ "events": [
+  {
+   "id": "G-W1",
+   "kind": "withdrawal",
+   "meeting_id": "MEET-9",
+   "candidate": "X",
+   "at": "2026-05-07T21:00:00"
+  },
+  {
+   "id": "G-ANNOUNCE-W",
+   "kind": "announce",
+   "meeting_id": "MEET-9",
+   "at": "2026-05-07T22:00:00"
+  }
+ ]
+}

@@ -9,7 +9,9 @@ HANDLERS={
  'application-import':{'household':application.household,'member':application.member,'document':application.document,'revoke_document':application.revoke_document},
  'eligibility-import':{'income':eligibility.income,'property':eligibility.property,'objection':eligibility.object,'resolve':eligibility.resolve},
  'allocation-import':{'unit':allocation.unit,'offer':allocation.offer,'sign':allocation.sign,'expire':allocation.expire},
- 'governance-import':{'meeting':governance.meeting,'ballot':governance.ballot},
+ 'governance-import':{'meeting':governance.meeting,'charter':governance.charter,'authorize':governance.authorize,
+                      'ballot':governance.ballot,'correction':governance.correction,'withdrawal':governance.withdrawal,
+                      'announce':governance.announce},
 }
 def import_file(db,command,path):
     raw,events=read_file(path);results=[]

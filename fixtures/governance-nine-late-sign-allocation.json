@@ -1,0 +1,211 @@
+{
+ "events": [
+  {
+   "id": "G-U1",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": false,
+   "available_at": "2026-04-05T11:00:00"
+  },
+  {
+   "id": "G-O1",
+   "kind": "offer",
+   "household_id": "family-01",
+   "unit_id": "G-U1",
+   "offered_at": "2026-04-09T12:00:00",
+   "expires_at": "2026-05-05T12:00:00"
+  },
+  {
+   "id": "G-S1",
+   "kind": "sign",
+   "offer_id": "G-O1",
+   "at": "2026-04-10T09:00:00",
+   "signer": "person-01"
+  },
+  {
+   "id": "G-U2",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": false,
+   "available_at": "2026-04-05T11:00:00"
+  },
+  {
+   "id": "G-O2",
+   "kind": "offer",
+   "household_id": "family-02",
+   "unit_id": "G-U2",
+   "offered_at": "2026-04-09T12:00:00",
+   "expires_at": "2026-05-05T12:00:00"
+  },
+  {
+   "id": "G-S2",
+   "kind": "sign",
+   "offer_id": "G-O2",
+   "at": "2026-04-10T09:00:00",
+   "signer": "person-02"
+  },
+  {
+   "id": "G-U3",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": false,
+   "available_at": "2026-04-05T11:00:00"
+  },
+  {
+   "id": "G-O3",
+   "kind": "offer",
+   "household_id": "family-03",
+   "unit_id": "G-U3",
+   "offered_at": "2026-04-09T12:00:00",
+   "expires_at": "2026-05-05T12:00:00"
+  },
+  {
+   "id": "G-S3",
+   "kind": "sign",
+   "offer_id": "G-O3",
+   "at": "2026-04-10T09:00:00",
+   "signer": "person-03"
+  },
+  {
+   "id": "G-U4",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": false,
+   "available_at": "2026-04-05T11:00:00"
+  },
+  {
+   "id": "G-O4",
+   "kind": "offer",
+   "household_id": "family-04",
+   "unit_id": "G-U4",
+   "offered_at": "2026-04-09T12:00:00",
+   "expires_at": "2026-05-05T12:00:00"
+  },
+  {
+   "id": "G-S4",
+   "kind": "sign",
+   "offer_id": "G-O4",
+   "at": "2026-04-10T09:00:00",
+   "signer": "person-04"
+  },
+  {
+   "id": "G-U5",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": false,
+   "available_at": "2026-04-05T11:00:00"
+  },
+  {
+   "id": "G-O5",
+   "kind": "offer",
+   "household_id": "family-05",
+   "unit_id": "G-U5",
+   "offered_at": "2026-04-09T12:00:00",
+   "expires_at": "2026-05-05T12:00:00"
+  },
+  {
+   "id": "G-S5",
+   "kind": "sign",
+   "offer_id": "G-O5",
+   "at": "2026-04-10T09:00:00",
+   "signer": "person-05"
+  },
+  {
+   "id": "G-U6",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": false,
+   "available_at": "2026-04-05T11:00:00"
+  },
+  {
+   "id": "G-O6",
+   "kind": "offer",
+   "household_id": "family-06",
+   "unit_id": "G-U6",
+   "offered_at": "2026-04-09T12:00:00",
+   "expires_at": "2026-05-05T12:00:00"
+  },
+  {
+   "id": "G-S6",
+   "kind": "sign",
+   "offer_id": "G-O6",
+   "at": "2026-04-10T09:00:00",
+   "signer": "person-06"
+  },
+  {
+   "id": "G-U7",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": false,
+   "available_at": "2026-04-05T11:00:00"
+  },
+  {
+   "id": "G-O7",
+   "kind": "offer",
+   "household_id": "family-07",
+   "unit_id": "G-U7",
+   "offered_at": "2026-04-09T12:00:00",
+   "expires_at": "2026-05-05T12:00:00"
+  },
+  {
+   "id": "G-S7",
+   "kind": "sign",
+   "offer_id": "G-O7",
+   "at": "2026-04-10T09:00:00",
+   "signer": "person-07"
+  },
+  {
+   "id": "G-U8",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": false,
+   "available_at": "2026-04-05T11:00:00"
+  },
+  {
+   "id": "G-O8",
+   "kind": "offer",
+   "household_id": "family-08",
+   "unit_id": "G-U8",
+   "offered_at": "2026-04-09T12:00:00",
+   "expires_at": "2026-05-05T12:00:00"
+  },
+  {
+   "id": "G-S8",
+   "kind": "sign",
+   "offer_id": "G-O8",
+   "at": "2026-04-10T09:00:00",
+   "signer": "person-08"
+  },
+  {
+   "id": "G-U9",
+   "kind": "unit",
+   "community": "ward-a",
+   "rooms": 1,
+   "accessible": false,
+   "available_at": "2026-04-05T11:00:00"
+  },
+  {
+   "id": "G-O9",
+   "kind": "offer",
+   "household_id": "family-09",
+   "unit_id": "G-U9",
+   "offered_at": "2026-04-09T12:00:00",
+   "expires_at": "2026-05-05T12:00:00"
+  },
+  {
+   "id": "G-S9",
+   "kind": "sign",
+   "offer_id": "G-O9",
+   "at": "2026-05-03T09:00:00",
+   "signer": "person-09"
+  }
+ ]
+}

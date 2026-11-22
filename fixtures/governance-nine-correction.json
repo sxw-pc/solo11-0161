@@ -1,0 +1,22 @@
+{
+ "events": [
+  {
+   "id": "G-COR1",
+   "kind": "correction",
+   "ballot_id": "G-V5",
+   "ranked": [
+    "X",
+    "Y",
+    "Z"
+   ],
+   "at": "2026-05-07T21:00:00",
+   "signer": "person-05"
+  },
+  {
+   "id": "G-ANNOUNCE-C",
+   "kind": "announce",
+   "meeting_id": "MEET-9",
+   "at": "2026-05-07T22:00:00"
+  }
+ ]
+}

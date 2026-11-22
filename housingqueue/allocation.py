@@ -35,6 +35,19 @@ def offer(db,e):
     log(db,'allocation',e['id'],state,reason,e['id'])
     return state
 
+def signed_at(db,household_id,at=None):
+    """Return the latest signature time for a household, or None.
+
+    With ``at`` supplied only signatures recorded at or before that instant are
+    considered, so a roster deadline can be evaluated without looking at later
+    allocation activity.
+    """
+    if at is None:
+        row=one(db,"SELECT MAX(at) AS t FROM signature WHERE state='signed' AND offer_id IN (SELECT id FROM offer WHERE household_id=?)",(household_id,))
+    else:
+        row=one(db,"SELECT MAX(at) AS t FROM signature WHERE state='signed' AND at<=? AND offer_id IN (SELECT id FROM offer WHERE household_id=?)",(at,household_id))
+    return row['t'] if row and row['t'] is not None else None
+
 def sign(db,e):
     o=one(db,'SELECT * FROM offer WHERE id=?',(e['offer_id'],))
     if not o:raise ValueError('unknown offer')

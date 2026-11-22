@@ -1,0 +1,454 @@
+{
+ "events": [
+  {
+   "id": "G-A1",
+   "kind": "household",
+   "household_id": "family-01",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "G-M1",
+   "kind": "member",
+   "person_id": "person-01",
+   "household_id": "family-01",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "G-D1-identity",
+   "kind": "document",
+   "household_id": "family-01",
+   "doc_kind": "identity",
+   "subject": "family-01",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D1-residence",
+   "kind": "document",
+   "household_id": "family-01",
+   "doc_kind": "residence",
+   "subject": "family-01",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D1-relation",
+   "kind": "document",
+   "household_id": "family-01",
+   "doc_kind": "relation",
+   "subject": "family-01",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-A2",
+   "kind": "household",
+   "household_id": "family-02",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "G-M2",
+   "kind": "member",
+   "person_id": "person-02",
+   "household_id": "family-02",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "G-D2-identity",
+   "kind": "document",
+   "household_id": "family-02",
+   "doc_kind": "identity",
+   "subject": "family-02",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D2-residence",
+   "kind": "document",
+   "household_id": "family-02",
+   "doc_kind": "residence",
+   "subject": "family-02",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D2-relation",
+   "kind": "document",
+   "household_id": "family-02",
+   "doc_kind": "relation",
+   "subject": "family-02",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-A3",
+   "kind": "household",
+   "household_id": "family-03",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "G-M3",
+   "kind": "member",
+   "person_id": "person-03",
+   "household_id": "family-03",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "G-D3-identity",
+   "kind": "document",
+   "household_id": "family-03",
+   "doc_kind": "identity",
+   "subject": "family-03",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D3-residence",
+   "kind": "document",
+   "household_id": "family-03",
+   "doc_kind": "residence",
+   "subject": "family-03",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D3-relation",
+   "kind": "document",
+   "household_id": "family-03",
+   "doc_kind": "relation",
+   "subject": "family-03",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-A4",
+   "kind": "household",
+   "household_id": "family-04",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "G-M4",
+   "kind": "member",
+   "person_id": "person-04",
+   "household_id": "family-04",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "G-D4-identity",
+   "kind": "document",
+   "household_id": "family-04",
+   "doc_kind": "identity",
+   "subject": "family-04",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D4-residence",
+   "kind": "document",
+   "household_id": "family-04",
+   "doc_kind": "residence",
+   "subject": "family-04",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D4-relation",
+   "kind": "document",
+   "household_id": "family-04",
+   "doc_kind": "relation",
+   "subject": "family-04",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-A5",
+   "kind": "household",
+   "household_id": "family-05",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "G-M5",
+   "kind": "member",
+   "person_id": "person-05",
+   "household_id": "family-05",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "G-D5-identity",
+   "kind": "document",
+   "household_id": "family-05",
+   "doc_kind": "identity",
+   "subject": "family-05",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D5-residence",
+   "kind": "document",
+   "household_id": "family-05",
+   "doc_kind": "residence",
+   "subject": "family-05",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D5-relation",
+   "kind": "document",
+   "household_id": "family-05",
+   "doc_kind": "relation",
+   "subject": "family-05",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-A6",
+   "kind": "household",
+   "household_id": "family-06",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "G-M6",
+   "kind": "member",
+   "person_id": "person-06",
+   "household_id": "family-06",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "G-D6-identity",
+   "kind": "document",
+   "household_id": "family-06",
+   "doc_kind": "identity",
+   "subject": "family-06",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D6-residence",
+   "kind": "document",
+   "household_id": "family-06",
+   "doc_kind": "residence",
+   "subject": "family-06",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D6-relation",
+   "kind": "document",
+   "household_id": "family-06",
+   "doc_kind": "relation",
+   "subject": "family-06",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-A7",
+   "kind": "household",
+   "household_id": "family-07",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "G-M7",
+   "kind": "member",
+   "person_id": "person-07",
+   "household_id": "family-07",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "G-D7-identity",
+   "kind": "document",
+   "household_id": "family-07",
+   "doc_kind": "identity",
+   "subject": "family-07",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D7-residence",
+   "kind": "document",
+   "household_id": "family-07",
+   "doc_kind": "residence",
+   "subject": "family-07",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D7-relation",
+   "kind": "document",
+   "household_id": "family-07",
+   "doc_kind": "relation",
+   "subject": "family-07",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-A8",
+   "kind": "household",
+   "household_id": "family-08",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "G-M8",
+   "kind": "member",
+   "person_id": "person-08",
+   "household_id": "family-08",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "G-D8-identity",
+   "kind": "document",
+   "household_id": "family-08",
+   "doc_kind": "identity",
+   "subject": "family-08",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D8-residence",
+   "kind": "document",
+   "household_id": "family-08",
+   "doc_kind": "residence",
+   "subject": "family-08",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D8-relation",
+   "kind": "document",
+   "household_id": "family-08",
+   "doc_kind": "relation",
+   "subject": "family-08",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-A9",
+   "kind": "household",
+   "household_id": "family-09",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "G-M9",
+   "kind": "member",
+   "person_id": "person-09",
+   "household_id": "family-09",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "G-D9-identity",
+   "kind": "document",
+   "household_id": "family-09",
+   "doc_kind": "identity",
+   "subject": "family-09",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D9-residence",
+   "kind": "document",
+   "household_id": "family-09",
+   "doc_kind": "residence",
+   "subject": "family-09",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "G-D9-relation",
+   "kind": "document",
+   "household_id": "family-09",
+   "doc_kind": "relation",
+   "subject": "family-09",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  }
+ ]
+}

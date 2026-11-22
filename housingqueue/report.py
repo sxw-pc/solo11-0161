@@ -2,7 +2,7 @@ import hashlib
 import json
 from .store import connect,many
 from .source import ingest
-TABLES=['household','member','document','application_decision','income_check','property_check','objection','eligibility','queue_position','unit','offer','signature','allocation_dispute','resident_meeting','resident_ballot','meeting_decision','decision_log']
+TABLES=['household','member','document','application_decision','income_check','property_check','objection','eligibility','queue_position','unit','offer','signature','allocation_dispute','resident_meeting','resident_ballot','ballot_dispute','ballot_authorization','ballot_correction','candidate_withdrawal','election_charter','meeting_charter','roster_snapshot','decision_version','decision_round','decision_ballot','decision_delta','meeting_decision','decision_log']
 def report(db):
     r={t:[dict(x) for x in many(db,f'SELECT * FROM {t} ORDER BY rowid')] for t in TABLES}
     r['event']=[dict(x) for x in many(db,'SELECT id,kind,sha FROM event ORDER BY rowid')]

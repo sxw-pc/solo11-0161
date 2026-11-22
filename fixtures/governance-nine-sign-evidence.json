@@ -1,0 +1,11 @@
+{
+ "events": [
+  {
+   "id": "G-S9",
+   "kind": "sign",
+   "offer_id": "G-O9",
+   "at": "2026-04-10T09:00:00",
+   "signer": "person-09"
+  }
+ ]
+}

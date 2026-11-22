@@ -1,0 +1,10 @@
+{
+ "events": [
+  {
+   "id": "G-ANNOUNCE-2",
+   "kind": "announce",
+   "meeting_id": "MEET-9",
+   "at": "2026-05-07T21:00:00"
+  }
+ ]
+}
