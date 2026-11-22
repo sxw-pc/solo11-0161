@@ -1,0 +1,3 @@
+{"events":[
+{"id":"MCOR1","kind":"remove_member","person_id":"p3","household_id":"h1","at":"2026-04-03T18:30:00","reason":"identity review proved p3 is not a member of h1 and holds no guest authorization"}
+]}

@@ -1,0 +1,9 @@
+{"events":[
+{"id":"R1","kind":"facility_room","community":"ward-b","capacity":8,"accessible":true,"noise":"loud","equipment":["projector","microphone","stage"],"dividable":true,"areas":[{"id":"R1-a","capacity":4,"accessible":true,"noise":"normal","equipment":["projector"]},{"id":"R1-b","capacity":4,"accessible":false,"noise":"normal","equipment":["whiteboard"]}]},
+{"id":"R2","kind":"facility_room","community":"ward-b","capacity":4,"accessible":true,"noise":"normal","equipment":["projector","whiteboard"]},
+{"id":"ACT1","kind":"activity","household_id":"h1","title":"award ceremony","attendees":6,"starts":"2026-04-03T18:00:00","ends":"2026-04-03T20:00:00","noise":"normal","equipment":["projector"],"accessible":false},
+{"id":"CONS1","kind":"activity_consent","activity_id":"ACT1","signer":"p1","at":"2026-04-02T10:00:00","windows":[{"starts":"2026-04-03T18:00:00","ends":"2026-04-03T19:00:00","attendees":3},{"starts":"2026-04-03T19:00:00","ends":"2026-04-03T20:00:00","attendees":3}]},
+{"id":"ACT2","kind":"activity","household_id":"h2","title":"stage rehearsal","attendees":4,"starts":"2026-04-03T18:00:00","ends":"2026-04-03T19:00:00","noise":"normal","equipment":["stage"],"accessible":false},
+{"id":"ACT3","kind":"activity","household_id":"h3","title":"karaoke night","attendees":4,"starts":"2026-04-03T19:00:00","ends":"2026-04-03T20:00:00","noise":"normal","equipment":["microphone"],"accessible":false},
+{"id":"GP1","kind":"guest_pass","activity_id":"ACT1","person_id":"g1","issuer":"p1","at":"2026-04-02T11:00:00"}
+]}

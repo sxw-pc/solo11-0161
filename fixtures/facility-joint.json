@@ -1,0 +1,12 @@
+{"events":[
+{"id":"SJ1","kind":"session","activity_id":"ACT1","room_id":"R1","starts":"2026-04-03T18:00:00","ends":"2026-04-03T20:00:00","attendees":6},
+{"id":"SJ2","kind":"session","activity_id":"ACT2","room_id":"R1","starts":"2026-04-03T18:00:00","ends":"2026-04-03T19:00:00","attendees":4},
+{"id":"SJ3","kind":"session","activity_id":"ACT3","room_id":"R1","starts":"2026-04-03T19:00:00","ends":"2026-04-03T20:00:00","attendees":4},
+{"id":"CJ1","kind":"checkin","session_id":"SJ1","person_id":"p1","at":"2026-04-03T18:00:00","witness":"staff-1","witness_kind":"independent"},
+{"id":"CJ2","kind":"checkin","session_id":"SJ1","person_id":"p2","at":"2026-04-03T18:00:00","witness":"p1","witness_kind":"host"},
+{"id":"CJ3","kind":"checkin","session_id":"SJ1","person_id":"p3","at":"2026-04-03T18:00:00","witness":"p1","witness_kind":"host"},
+{"id":"CJ4","kind":"checkin","session_id":"SJ1","person_id":"p4","at":"2026-04-03T18:00:00","witness":"p1","witness_kind":"host"},
+{"id":"CJ5","kind":"checkin","session_id":"SJ1","person_id":"p5","at":"2026-04-03T18:00:00","witness":"p1","witness_kind":"host"},
+{"id":"CJ6","kind":"checkin","session_id":"SJ1","person_id":"p6","at":"2026-04-03T18:00:00","witness":"p1","witness_kind":"host"},
+{"id":"CJG","kind":"checkin","session_id":"SJ1","person_id":"g1","at":"2026-04-03T18:10:00","witness":"p1","witness_kind":"host"}
+]}

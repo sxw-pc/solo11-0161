@@ -6,10 +6,10 @@ from .store import connect
 from .source import read_file,ingest
 from . import application,eligibility,allocation,facility,report
 HANDLERS={
- 'application-import':{'household':application.household,'member':application.member,'document':application.document,'revoke_document':application.revoke_document},
+ 'application-import':{'household':application.household,'member':application.member,'remove_member':application.remove_member,'document':application.document,'revoke_document':application.revoke_document},
  'eligibility-import':{'income':eligibility.income,'property':eligibility.property,'objection':eligibility.object,'resolve':eligibility.resolve},
  'allocation-import':{'unit':allocation.unit,'offer':allocation.offer,'sign':allocation.sign,'expire':allocation.expire},
- 'facility-import':{'facility_room':facility.room,'facility_booking':facility.booking},
+ 'facility-import':{'facility_room':facility.room,'facility_booking':facility.booking,'activity':facility.activity,'activity_consent':facility.consent,'session':facility.session,'session_move':facility.session_move,'session_cancel':facility.session_cancel,'guest_pass':facility.guest_pass,'checkin':facility.checkin,'attendee_correction':facility.attendee_correction},
 }
 def import_file(db,command,path):
     raw,events=read_file(path);results=[]
@@ -27,7 +27,10 @@ def main(argv=None):
     args=p.parse_args(argv);db=connect(args.db)
     if args.command=='demo':
         results=[]
-        for cmd,name in [('application-import','application-ok.json'),('eligibility-import','eligibility-ok.json'),('allocation-import','allocation-ok.json')]:
+        for cmd,name in [('application-import','application-ok.json'),('eligibility-import','eligibility-ok.json'),('allocation-import','allocation-ok.json'),
+                         ('application-import','application-facility.json'),('eligibility-import','eligibility-facility.json'),('allocation-import','allocation-facility.json'),
+                         ('facility-import','facility-ok.json'),('facility-import','facility-evening.json'),('facility-import','facility-split.json'),
+                         ('application-import','facility-correction.json')]:
             results.extend(import_file(db,cmd,Path(__file__).resolve().parents[1]/'fixtures'/name))
         result={'outcomes':results,'report':report.report(db)}
     elif args.command=='report':result=report.report(db)

@@ -1,0 +1,11 @@
+{"events":[
+{"id":"UB1","kind":"unit","community":"ward-b","rooms":3,"accessible":true,"available_at":"2026-04-01T11:00:00"},
+{"id":"OB1","kind":"offer","household_id":"h1","unit_id":"UB1","offered_at":"2026-04-01T12:00:00","expires_at":"2026-04-02T12:00:00"},
+{"id":"SB1","kind":"sign","offer_id":"OB1","at":"2026-04-01T13:00:00","signer":"p1"},
+{"id":"UB2","kind":"unit","community":"ward-b","rooms":2,"accessible":true,"available_at":"2026-04-01T11:00:00"},
+{"id":"OB2","kind":"offer","household_id":"h2","unit_id":"UB2","offered_at":"2026-04-01T12:00:00","expires_at":"2026-04-02T12:00:00"},
+{"id":"SB2","kind":"sign","offer_id":"OB2","at":"2026-04-01T13:00:00","signer":"q1"},
+{"id":"UB3","kind":"unit","community":"ward-b","rooms":2,"accessible":true,"available_at":"2026-04-01T11:00:00"},
+{"id":"OB3","kind":"offer","household_id":"h3","unit_id":"UB3","offered_at":"2026-04-01T12:00:00","expires_at":"2026-04-02T12:00:00"},
+{"id":"SB3","kind":"sign","offer_id":"OB3","at":"2026-04-01T13:00:00","signer":"r1"}
+]}

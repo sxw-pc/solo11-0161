@@ -24,6 +24,20 @@ def member(db,e):
     for x in others:recompute(db,x['household_id'],e['id'])
     return recompute(db,e['household_id'],e['id'])
 
+def remove_member(db,e):
+    h=one(db,'SELECT * FROM household WHERE id=?',(e['household_id'],))
+    if not h:raise ValueError('unknown household')
+    m=one(db,"SELECT * FROM member WHERE id=? AND household_id=? AND state='active'",(e['person_id'],e['household_id']))
+    if not m:raise ValueError('unknown active member')
+    db.execute("UPDATE member SET state='removed',removed_at=? WHERE id=? AND household_id=?",(e['at'],e['person_id'],e['household_id']))
+    log(db,'application',e['household_id'],'member_removed','membership corrected: '+e.get('reason',''),e['id'])
+    others=many(db,"SELECT household_id FROM member WHERE id=? AND household_id<>? AND state='active'",(e['person_id'],e['household_id']))
+    state=recompute(db,e['household_id'],e['id'])
+    for x in others:recompute(db,x['household_id'],e['id'])
+    from . import facility
+    facility.apply_person_correction(db,e['person_id'],e['household_id'],e['at'],e['id'])
+    return state
+
 def document(db,e):
     if not one(db,'SELECT id FROM household WHERE id=?',(e['household_id'],)):raise ValueError('unknown household')
     if e['issued_at']>e['received_at'] or e['received_at']>=e['expires_at'] or not e.get('issuer'):

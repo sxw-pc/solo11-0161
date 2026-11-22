@@ -1,0 +1,14 @@
+{"events":[
+{"id":"IH1-1","kind":"income","household_id":"h1","month":"2026-01","cents":100000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"IH1-2","kind":"income","household_id":"h1","month":"2026-02","cents":110000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"IH1-3","kind":"income","household_id":"h1","month":"2026-03","cents":120000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"PH1","kind":"property","household_id":"h1","area_m2":0,"effective_at":"2026-03-01T00:00:00","issuer":"registry","at":"2026-04-01T10:00:00"},
+{"id":"IH2-1","kind":"income","household_id":"h2","month":"2026-01","cents":100000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"IH2-2","kind":"income","household_id":"h2","month":"2026-02","cents":110000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"IH2-3","kind":"income","household_id":"h2","month":"2026-03","cents":120000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"PH2","kind":"property","household_id":"h2","area_m2":0,"effective_at":"2026-03-01T00:00:00","issuer":"registry","at":"2026-04-01T10:00:00"},
+{"id":"IH3-1","kind":"income","household_id":"h3","month":"2026-01","cents":100000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"IH3-2","kind":"income","household_id":"h3","month":"2026-02","cents":110000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"IH3-3","kind":"income","household_id":"h3","month":"2026-03","cents":120000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"PH3","kind":"property","household_id":"h3","area_m2":0,"effective_at":"2026-03-01T00:00:00","issuer":"registry","at":"2026-04-01T10:00:00"}
+]}
