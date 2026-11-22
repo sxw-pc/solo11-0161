@@ -1,0 +1,18 @@
+{"events":[
+{"id":"PLAN-A","kind":"flow_plan","building":"tower-a","horizon":12,"threshold":100,"title":"route alpha: inlet valve closure, dedicated flush and bottled water"},
+{"id":"TOWER-A-TANK","kind":"flow_tank","building":"tower-a","id":"tank-a","initial_volume":100,"capacity":100,"initial_cfu":200,"clean_inflow":20},
+{"id":"TOWER-A-MAIN","kind":"flow_pipe","building":"tower-a","id":"main-a","upstream_id":"tank-a","pipe_volume":40,"initial_volume":40,"initial_cfu":140},
+{"id":"VALVE-A-IN","kind":"flow_valve","building":"tower-a","id":"valve-a-in","upstream_id":"main-a","valve_state":"open","capacity":20,"demand":20},
+{"id":"VALVE-A-DRAIN","kind":"flow_valve","building":"tower-a","id":"valve-a-drain","upstream_id":"main-a","valve_state":"closed","capacity":20,"demand":20},
+{"id":"OUTLET-A","kind":"flow_outlet","building":"tower-a","id":"outlet-a","upstream_id":"valve-a-drain","demand":20},
+{"id":"PIPE-A-U1","kind":"flow_pipe","building":"tower-a","id":"pipe-a-u1","upstream_id":"valve-a-in","pipe_volume":40,"initial_volume":40,"initial_cfu":140},
+{"id":"FTAP-U1","kind":"flow_tap","building":"tower-a","tap_id":"TAP-U1","upstream_id":"pipe-a-u1","demand":20},
+{"id":"ACT-A-CLOSE-IN","kind":"flow_action","building":"tower-a","target_id":"valve-a-in","target_kind":"valve","at_minute":1,"state":"closed","approved":true,"reason":"approved route alpha: stop household supply before dedicated flush"},
+{"id":"ACT-A-OPEN-DRAIN","kind":"flow_action","building":"tower-a","target_id":"valve-a-drain","target_kind":"valve","at_minute":1,"state":"open","approved":true,"reason":"open dedicated flush outlet to clear retained riser water"},
+{"id":"ACT-A-CLOSE-DRAIN","kind":"flow_action","building":"tower-a","target_id":"valve-a-drain","target_kind":"valve","at_minute":4,"state":"closed","approved":true,"reason":"flush verified, close drain before reopening household valve"},
+{"id":"ACT-A-OPEN-IN","kind":"flow_action","building":"tower-a","target_id":"valve-a-in","target_kind":"valve","at_minute":5,"state":"open","approved":true,"reason":"flow check passed, reopen household inlet for resampling"},
+{"id":"S-A0","kind":"flow_sample","building":"tower-a","tap_node_id":"FTAP-U1","sampled_minute":0,"received_minute":0,"cfu_per_litre":140,"qc":"pass"},
+{"id":"S-A3-QCFAIL","kind":"flow_sample","building":"tower-a","tap_node_id":"FTAP-U1","sampled_minute":3,"received_minute":4,"cfu_per_litre":60,"qc":"fail"},
+{"id":"S-A6","kind":"flow_sample","building":"tower-a","tap_node_id":"FTAP-U1","sampled_minute":6,"received_minute":7,"cfu_per_litre":140,"qc":"pass"},
+{"id":"S-A10","kind":"flow_sample","building":"tower-a","tap_node_id":"FTAP-U1","sampled_minute":10,"received_minute":10,"cfu_per_litre":53.4,"qc":"pass"}
+]}

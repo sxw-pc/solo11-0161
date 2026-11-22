@@ -1,0 +1,4 @@
+{"events":[
+{"id":"TAP-U1","kind":"water_tap","unit_id":"U1","zone":"riser-a"},
+{"id":"TAP-U2","kind":"water_tap","unit_id":"U2","zone":"riser-b"}
+]}

@@ -2,11 +2,13 @@ import hashlib
 import json
 from .store import connect,many
 from .source import ingest
-TABLES=['household','member','document','application_decision','income_check','property_check','objection','eligibility','queue_position','unit','offer','signature','allocation_dispute','water_tap','water_sample','decision_log']
+TABLES=['household','member','document','application_decision','income_check','property_check','objection','eligibility','queue_position','unit','offer','signature','allocation_dispute','water_tap','water_sample','flow_plan','flow_node','flow_action','flow_sample','flow_minute','flow_parcel','flow_directive','decision_log']
 def report(db):
     r={t:[dict(x) for x in many(db,f'SELECT * FROM {t} ORDER BY rowid')] for t in TABLES}
     r['event']=[dict(x) for x in many(db,'SELECT id,kind,sha FROM event ORDER BY rowid')]
     r['source_file']=[dict(x) for x in many(db,'SELECT id,command,sha FROM source_file ORDER BY id')]
+    r['flow_conservation']=[dict(x) for x in many(
+        db,'SELECT building, MAX(ABS(conservation_diff)) AS max_abs_diff FROM flow_minute GROUP BY building ORDER BY building')]
     return r
 def audit(db,handlers):
     replay=connect(':memory:')

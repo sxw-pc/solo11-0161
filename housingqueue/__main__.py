@@ -4,12 +4,13 @@ import json
 from pathlib import Path
 from .store import connect
 from .source import read_file,ingest
-from . import application,eligibility,allocation,water,report
+from . import application,eligibility,allocation,water,water_flow,report
 HANDLERS={
  'application-import':{'household':application.household,'member':application.member,'document':application.document,'revoke_document':application.revoke_document},
  'eligibility-import':{'income':eligibility.income,'property':eligibility.property,'objection':eligibility.object,'resolve':eligibility.resolve},
  'allocation-import':{'unit':allocation.unit,'offer':allocation.offer,'sign':allocation.sign,'expire':allocation.expire},
  'water-import':{'water_tap':water.tap,'water_sample':water.sample},
+ 'water-flow-import':water_flow.HANDLERS,
 }
 def import_file(db,command,path):
     raw,events=read_file(path);results=[]
