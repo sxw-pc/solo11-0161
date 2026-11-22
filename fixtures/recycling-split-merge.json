@@ -1,0 +1,14 @@
+{"events":[
+{"id":"SEAL-S1","kind":"container_seal","sealed_at":"2026-04-03T10:00:00","tare_grams":300},
+{"id":"SEAL-S2","kind":"container_seal","sealed_at":"2026-04-03T10:05:00","tare_grams":200},
+{"id":"SEAL-T1","kind":"container_seal","sealed_at":"2026-04-03T10:10:00","tare_grams":250},
+{"id":"PACK-S1-H1M","kind":"drop_pack","container_id":"SEAL-S1","waste_drop_id":"WASTE-H1-M","household_id":"family-a","stream":"metal","packed_grams":1000},
+{"id":"PACK-S2-H1P","kind":"drop_pack","container_id":"SEAL-S2","waste_drop_id":"WASTE-H1","household_id":"family-a","stream":"paper","packed_grams":1500},
+{"id":"SPLIT-S2","kind":"container_split","container_id":"SEAL-S2","new_container_id":"SEAL-T1","split_grams":600,"at":"2026-04-03T10:20:00","reason":"separate bale for direct mill delivery"},
+{"id":"MERGE-T1","kind":"container_merge","target_container_id":"SEAL-S1","source_container_ids":["SEAL-T1"],"at":"2026-04-03T10:25:00","reason":"consolidate metal-bound mixed loads"},
+{"id":"TARE-S1","kind":"container_tare","container_id":"SEAL-S1","gross_grams":1900,"weigher":"depot-scale-a","at":"2026-04-03T10:40:00"},
+{"id":"TARE-S2","kind":"container_tare","container_id":"SEAL-S2","gross_grams":1100,"weigher":"depot-scale-a","at":"2026-04-03T10:41:00"},
+{"id":"SHIP-S1","kind":"shipment_out","container_ids":["SEAL-S1"],"at":"2026-04-03T11:00:00"},
+{"id":"RECV-S1","kind":"plant_receive","shipment_id":"SHIP-S1","plant":"recycling-plant-1","at":"2026-04-03T13:00:00"},
+{"id":"CERT-S1","kind":"processing_outcome","certificate_id":"CERT-S1","container_id":"SEAL-S1","route":"recycling","recycled_grams":1550,"residue_grams":50,"at":"2026-04-04T15:00:00","plant":"recycling-plant-1"}
+]}

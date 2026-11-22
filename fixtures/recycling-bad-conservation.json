@@ -1,0 +1,8 @@
+{"events":[
+{"id":"SEAL-B1","kind":"container_seal","sealed_at":"2026-04-03T10:00:00","tare_grams":300},
+{"id":"PACK-B1-H1","kind":"drop_pack","container_id":"SEAL-B1","waste_drop_id":"WASTE-H1","household_id":"family-a","stream":"paper","packed_grams":1000},
+{"id":"TARE-B1","kind":"container_tare","container_id":"SEAL-B1","gross_grams":1300,"weigher":"depot-scale-a","at":"2026-04-03T10:30:00"},
+{"id":"SHIP-B1","kind":"shipment_out","container_ids":["SEAL-B1"],"at":"2026-04-03T11:00:00"},
+{"id":"RECV-B1","kind":"plant_receive","shipment_id":"SHIP-B1","plant":"recycling-plant-1","at":"2026-04-03T13:00:00"},
+{"id":"CERT-BAD1","kind":"processing_outcome","certificate_id":"CERT-BAD1","container_id":"SEAL-B1","route":"recycling","recycled_grams":900,"residue_grams":200,"at":"2026-04-04T15:00:00","plant":"recycling-plant-1","reason":"outputs 1100g from 1000g input, conservation must reject"}
+]}

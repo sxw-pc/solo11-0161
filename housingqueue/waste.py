@@ -3,11 +3,16 @@ from .reward import decide as reward_decide
 
 
 def decide(db, household_id, event_id=None):
-    grams = one(db, 'SELECT COALESCE(SUM(mass_grams),0) AS n FROM waste_drop WHERE household_id=?', (household_id,))['n']
+    # 入站毛重只作受理记录，永不被后续去皮/分拣改写；回收积分不再由毛重直接换算
+    grams = one(db, 'SELECT COALESCE(SUM(mass_grams),0) AS n FROM waste_drop WHERE household_id=?',
+                (household_id,))['n']
     state = 'accepted' if grams else 'pending'
-    db.execute('INSERT INTO waste_decision(household_id,accepted_grams,state) VALUES(?,?,?) ON CONFLICT(household_id) DO UPDATE SET accepted_grams=excluded.accepted_grams,state=excluded.state',
-               (household_id, grams, state))
-    log(db, 'waste', household_id, state, 'gross deposited material weighed', event_id)
+    db.execute('INSERT INTO waste_decision(household_id,accepted_grams,state) VALUES(?,?,?) '
+               'ON CONFLICT(household_id) DO UPDATE SET accepted_grams=excluded.accepted_grams,'
+               'state=excluded.state', (household_id, grams, state))
+    log(db, 'waste', household_id, state,
+        'gross deposited material weighed; points require verified actual recycled material', event_id)
+    # 此时没有任何实际再生物证据，积分保持 pending，等待 recycling 加工证书
     reward_decide(db, household_id, event_id)
     return state
 

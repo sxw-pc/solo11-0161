@@ -1,0 +1,9 @@
+{"events":[
+{"id":"SEAL-E1","kind":"container_seal","sealed_at":"2026-04-03T10:00:00","tare_grams":400},
+{"id":"PACK-E1-H1","kind":"drop_pack","container_id":"SEAL-E1","waste_drop_id":"WASTE-H1","household_id":"family-a","stream":"paper","packed_grams":4000},
+{"id":"PACK-E1-H2","kind":"drop_pack","container_id":"SEAL-E1","waste_drop_id":"WASTE-H2","household_id":"family-b","stream":"plastic","packed_grams":4000},
+{"id":"TARE-E1","kind":"container_tare","container_id":"SEAL-E1","gross_grams":8400,"weigher":"depot-scale-b","at":"2026-04-03T10:30:00"},
+{"id":"SHIP-E1","kind":"shipment_out","container_ids":["SEAL-E1"],"at":"2026-04-03T11:00:00","note":"daily storage cap reached; compliant energy recovery chosen"},
+{"id":"RECV-E1","kind":"plant_receive","shipment_id":"SHIP-E1","plant":"energy-plant-1","at":"2026-04-03T13:30:00"},
+{"id":"CERT-EN1","kind":"processing_outcome","certificate_id":"CERT-EN1","container_id":"SEAL-E1","route":"energy","recycled_grams":0,"residue_grams":500,"energy_grams":7300,"loss_grams":200,"at":"2026-04-03T18:00:00","plant":"energy-plant-1","reason":"all 8kg has a regulated destination but actual recyclate is zero; no household recycling points"}
+]}

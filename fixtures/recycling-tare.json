@@ -1,0 +1,7 @@
+{"events":[
+{"id":"SEAL-D1","kind":"container_seal","sealed_at":"2026-04-03T10:00:00","tare_grams":450},
+{"id":"PACK-D1-H1","kind":"drop_pack","container_id":"SEAL-D1","waste_drop_id":"WASTE-H1","household_id":"family-a","stream":"paper","packed_grams":3000},
+{"id":"PACK-D1-H2","kind":"drop_pack","container_id":"SEAL-D1","waste_drop_id":"WASTE-H2","household_id":"family-b","stream":"plastic","packed_grams":2000},
+{"id":"TARE-D1","kind":"container_tare","container_id":"SEAL-D1","gross_grams":5150,"weigher":"depot-scale-c","at":"2026-04-03T10:30:00","note":"re-weigh shows 300g tare/wrapper difference vs packed gross"},
+{"id":"EVAP-D1","kind":"evaporation_loss","container_id":"SEAL-D1","loss_grams":200,"reason":"moisture evaporation during overnight aeration","inspector":"depot-auditor","at":"2026-04-04T08:00:00"}
+]}

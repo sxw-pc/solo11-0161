@@ -1,0 +1,5 @@
+{"events":[
+{"id":"WASTE-H1","kind":"waste_drop","household_id":"family-a","stream":"paper","mass_grams":4000,"at":"2026-04-03T09:00:00"},
+{"id":"WASTE-H2","kind":"waste_drop","household_id":"family-b","stream":"plastic","mass_grams":4000,"at":"2026-04-03T09:05:00"},
+{"id":"WASTE-H1-M","kind":"waste_drop","household_id":"family-a","stream":"metal","mass_grams":1000,"at":"2026-04-03T09:10:00"}
+]}

@@ -18,7 +18,17 @@ CREATE TABLE IF NOT EXISTS signature(id TEXT PRIMARY KEY,offer_id TEXT NOT NULL,
 CREATE TABLE IF NOT EXISTS allocation_dispute(id INTEGER PRIMARY KEY,offer_id TEXT NOT NULL,household_id TEXT NOT NULL,eligibility_version INTEGER NOT NULL,state TEXT NOT NULL,reason TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS waste_drop(id TEXT PRIMARY KEY,household_id TEXT NOT NULL,stream TEXT NOT NULL,mass_grams INTEGER NOT NULL,at TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS waste_decision(household_id TEXT PRIMARY KEY,accepted_grams INTEGER NOT NULL,state TEXT NOT NULL);
-CREATE TABLE IF NOT EXISTS reward_decision(household_id TEXT PRIMARY KEY,points INTEGER NOT NULL,state TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS reward_decision(household_id TEXT PRIMARY KEY,points INTEGER NOT NULL,state TEXT NOT NULL,verified_grams INTEGER NOT NULL DEFAULT 0,basis TEXT NOT NULL DEFAULT '');
+CREATE TABLE IF NOT EXISTS recycling_container(id TEXT PRIMARY KEY,state TEXT NOT NULL,sealed_at TEXT NOT NULL,tare_grams INTEGER NOT NULL,gross_grams INTEGER,net_grams INTEGER,note TEXT NOT NULL DEFAULT '');
+CREATE TABLE IF NOT EXISTS recycling_lot_ledger(id INTEGER PRIMARY KEY,event_id TEXT NOT NULL,container_id TEXT NOT NULL,household_id TEXT NOT NULL,stream TEXT NOT NULL,waste_drop_id TEXT,change_grams INTEGER NOT NULL,basis TEXT NOT NULL,reason TEXT NOT NULL DEFAULT '');
+CREATE TABLE IF NOT EXISTS recycling_shipment(id TEXT PRIMARY KEY,at TEXT NOT NULL,state TEXT NOT NULL,plant TEXT,note TEXT NOT NULL DEFAULT '');
+CREATE TABLE IF NOT EXISTS recycling_shipment_container(shipment_id TEXT NOT NULL,container_id TEXT NOT NULL,PRIMARY KEY(shipment_id,container_id));
+CREATE TABLE IF NOT EXISTS recycling_contamination(id TEXT PRIMARY KEY,scope TEXT NOT NULL,container_id TEXT,waste_drop_id TEXT,contaminant_grams INTEGER NOT NULL,at TEXT NOT NULL,inspector TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS recycling_ratio(id TEXT PRIMARY KEY,stream TEXT NOT NULL,ratio_bp INTEGER NOT NULL,published_at TEXT NOT NULL,note TEXT NOT NULL DEFAULT '');
+CREATE TABLE IF NOT EXISTS processing_certificate(id TEXT PRIMARY KEY,shipment_id TEXT NOT NULL,container_id TEXT NOT NULL,route TEXT NOT NULL,recycled_grams INTEGER NOT NULL,residue_grams INTEGER NOT NULL,energy_grams INTEGER NOT NULL,loss_grams INTEGER NOT NULL,at TEXT NOT NULL,plant TEXT NOT NULL,state TEXT NOT NULL,reuse_reference TEXT,reason TEXT NOT NULL DEFAULT '');
+CREATE TABLE IF NOT EXISTS reward_lot(id INTEGER PRIMARY KEY,household_id TEXT NOT NULL,certificate_id TEXT NOT NULL,container_id TEXT NOT NULL,grams INTEGER NOT NULL,points INTEGER NOT NULL,state TEXT NOT NULL,basis TEXT NOT NULL,event_id TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS reward_payout(id TEXT PRIMARY KEY,household_id TEXT NOT NULL,points INTEGER NOT NULL,at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS reward_recovery(id INTEGER PRIMARY KEY,event_id TEXT NOT NULL,household_id TEXT NOT NULL,points INTEGER NOT NULL,reason TEXT NOT NULL,UNIQUE(event_id,household_id));
 CREATE TABLE IF NOT EXISTS decision_log(id INTEGER PRIMARY KEY,system TEXT NOT NULL,object_id TEXT NOT NULL,state TEXT NOT NULL,reason TEXT NOT NULL,event_id TEXT,at TEXT DEFAULT CURRENT_TIMESTAMP);
 """
 def connect(path):

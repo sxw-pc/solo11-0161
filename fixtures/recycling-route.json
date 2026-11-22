@@ -1,0 +1,12 @@
+{"events":[
+{"id":"RATIO-PAPER","kind":"recyclable_ratio","stream":"paper","ratio_bp":7500,"published_at":"2026-04-02T08:00:00","note":"pre-published net recyclable ratio for mixed paper batches"},
+{"id":"RATIO-PLASTIC","kind":"recyclable_ratio","stream":"plastic","ratio_bp":7500,"published_at":"2026-04-02T08:00:00","note":"pre-published net recyclable ratio for mixed plastic batches"},
+{"id":"SEAL-C1","kind":"container_seal","sealed_at":"2026-04-03T10:00:00","tare_grams":500},
+{"id":"PACK-C1-H1","kind":"drop_pack","container_id":"SEAL-C1","waste_drop_id":"WASTE-H1","household_id":"family-a","stream":"paper","packed_grams":4000},
+{"id":"PACK-C1-H2","kind":"drop_pack","container_id":"SEAL-C1","waste_drop_id":"WASTE-H2","household_id":"family-b","stream":"plastic","packed_grams":4000},
+{"id":"TARE-C1","kind":"container_tare","container_id":"SEAL-C1","gross_grams":8500,"weigher":"depot-scale-a","at":"2026-04-03T10:30:00"},
+{"id":"SHIP-1","kind":"shipment_out","container_ids":["SEAL-C1"],"at":"2026-04-03T11:00:00"},
+{"id":"RECV-1","kind":"plant_receive","shipment_id":"SHIP-1","plant":"recycling-plant-1","at":"2026-04-03T13:00:00"},
+{"id":"CONT-BATCH-C1","kind":"contamination_check","scope":"batch","container_id":"SEAL-C1","contaminant_grams":2000,"at":"2026-04-04T09:00:00","inspector":"plant-lab"},
+{"id":"CERT-RC1","kind":"processing_outcome","certificate_id":"CERT-RC1","container_id":"SEAL-C1","route":"recycling","recycled_grams":6000,"residue_grams":2000,"at":"2026-04-04T15:00:00","plant":"recycling-plant-1","reason":"authorized next-day sorting yields 6kg recyclate and 2kg residue"}
+]}

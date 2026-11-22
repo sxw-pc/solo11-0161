@@ -4,12 +4,20 @@ import json
 from pathlib import Path
 from .store import connect
 from .source import read_file,ingest
-from . import application,eligibility,allocation,waste,report
+from . import application,eligibility,allocation,waste,recycling,report
 HANDLERS={
  'application-import':{'household':application.household,'member':application.member,'document':application.document,'revoke_document':application.revoke_document},
  'eligibility-import':{'income':eligibility.income,'property':eligibility.property,'objection':eligibility.object,'resolve':eligibility.resolve},
  'allocation-import':{'unit':allocation.unit,'offer':allocation.offer,'sign':allocation.sign,'expire':allocation.expire},
  'waste-import':{'waste_drop':waste.drop},
+ 'recycling-import':{
+   'container_seal':recycling.container_seal,'drop_pack':recycling.drop_pack,
+   'container_tare':recycling.container_tare,'evaporation_loss':recycling.evaporation_loss,
+   'container_split':recycling.container_split,'container_merge':recycling.container_merge,
+   'shipment_out':recycling.shipment_out,'plant_receive':recycling.plant_receive,
+   'contamination_check':recycling.contamination_check,'recyclable_ratio':recycling.recyclable_ratio,
+   'processing_outcome':recycling.processing_outcome,'certificate_reuse':recycling.certificate_reuse,
+   'reward_payout':recycling.reward_payout},
 }
 def import_file(db,command,path):
     raw,events=read_file(path);results=[]
