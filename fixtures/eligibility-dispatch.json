@@ -1,0 +1,76 @@
+{
+ "events": [
+  {
+   "id": "IB1",
+   "kind": "income",
+   "household_id": "family-b",
+   "month": "2026-01",
+   "cents": 100000,
+   "issuer": "tax-office",
+   "at": "2026-04-01T10:00:00"
+  },
+  {
+   "id": "IB2",
+   "kind": "income",
+   "household_id": "family-b",
+   "month": "2026-02",
+   "cents": 100000,
+   "issuer": "tax-office",
+   "at": "2026-04-01T10:00:00"
+  },
+  {
+   "id": "IB3",
+   "kind": "income",
+   "household_id": "family-b",
+   "month": "2026-03",
+   "cents": 100000,
+   "issuer": "tax-office",
+   "at": "2026-04-01T10:00:00"
+  },
+  {
+   "id": "PB",
+   "kind": "property",
+   "household_id": "family-b",
+   "area_m2": 0,
+   "effective_at": "2026-03-01T00:00:00",
+   "issuer": "registry",
+   "at": "2026-04-01T10:00:00"
+  },
+  {
+   "id": "IC1",
+   "kind": "income",
+   "household_id": "family-c",
+   "month": "2026-01",
+   "cents": 100000,
+   "issuer": "tax-office",
+   "at": "2026-04-01T10:00:00"
+  },
+  {
+   "id": "IC2",
+   "kind": "income",
+   "household_id": "family-c",
+   "month": "2026-02",
+   "cents": 100000,
+   "issuer": "tax-office",
+   "at": "2026-04-01T10:00:00"
+  },
+  {
+   "id": "IC3",
+   "kind": "income",
+   "household_id": "family-c",
+   "month": "2026-03",
+   "cents": 100000,
+   "issuer": "tax-office",
+   "at": "2026-04-01T10:00:00"
+  },
+  {
+   "id": "PC",
+   "kind": "property",
+   "household_id": "family-c",
+   "area_m2": 0,
+   "effective_at": "2026-03-01T00:00:00",
+   "issuer": "registry",
+   "at": "2026-04-01T10:00:00"
+  }
+ ]
+}

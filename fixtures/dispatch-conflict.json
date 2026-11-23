@@ -1,0 +1,3 @@
+{"events":[
+{"id":"CONFLICT-1","kind":"meter_conflict","device_id":"DEV-U1","meter_reading_id":"POWER-CONFLICT","note":"declared minimum 1.0 kW but meter shows 2.2 kW"}
+]}

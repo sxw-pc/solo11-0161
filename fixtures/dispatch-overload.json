@@ -1,0 +1,7 @@
+{"events":[
+{"id":"BAT-OV","kind":"battery","community":"ward-b","usable_wh":3000},
+{"id":"INV-OV","kind":"inverter","community":"ward-b","limit_w":1500},
+{"id":"GRID-OV","kind":"grid","community":"ward-b","at":"2026-04-03T18:00:00","state":"off","reason":"scheduled one-hour outage"},
+{"id":"DEV-OV","kind":"device","unit_id":"OV-U4","label":"oxygen-concentrator","critical":true,"power_w":1800,"interruptible":false,"consent":"none","window_start":"2026-04-03T18:00:00","window_end":"2026-04-03T19:00:00"},
+{"id":"DLV-OV","kind":"delivery","offer_id":"O-D","unit_id":"OV-U4","at":"2026-04-03T12:00:00","witness":"ward-officer-li","evidence":"handover-ovu4.jpg"}
+]}

@@ -1,0 +1,7 @@
+{"events": [
+{"id": "U2", "kind": "unit", "community": "ward-a", "rooms": 1, "accessible": false, "available_at": "2026-04-01T11:00:00"},
+{"id": "U3", "kind": "unit", "community": "ward-a", "rooms": 1, "accessible": false, "available_at": "2026-04-01T11:00:00"},
+{"id": "O2", "kind": "offer", "household_id": "family-b", "unit_id": "U2", "offered_at": "2026-04-01T12:00:00", "expires_at": "2026-04-02T12:00:00"},
+{"id": "S2", "kind": "sign", "offer_id": "O2", "at": "2026-04-01T13:00:00", "signer": "person-b1"},
+{"id": "O3", "kind": "offer", "household_id": "family-c", "unit_id": "U3", "offered_at": "2026-04-01T12:00:00", "expires_at": "2026-04-04T12:00:00"}
+]}

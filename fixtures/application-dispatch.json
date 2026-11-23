@@ -1,0 +1,120 @@
+{
+ "events": [
+  {
+   "id": "HB",
+   "kind": "household",
+   "household_id": "family-b",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "MB1",
+   "kind": "member",
+   "person_id": "person-b1",
+   "household_id": "family-b",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "MB2",
+   "kind": "member",
+   "person_id": "person-b2",
+   "household_id": "family-b",
+   "relation": "child",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "DB1",
+   "kind": "document",
+   "household_id": "family-b",
+   "doc_kind": "identity",
+   "subject": "person-b1",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "DB2",
+   "kind": "document",
+   "household_id": "family-b",
+   "doc_kind": "residence",
+   "subject": "family-b",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "DB3",
+   "kind": "document",
+   "household_id": "family-b",
+   "doc_kind": "relation",
+   "subject": "family-b",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "HC",
+   "kind": "household",
+   "household_id": "family-c",
+   "community": "ward-a",
+   "applied_at": "2026-04-01T09:00:00",
+   "residence_from": "2020-01-01T00:00:00",
+   "version": 1
+  },
+  {
+   "id": "MC1",
+   "kind": "member",
+   "person_id": "person-c1",
+   "household_id": "family-c",
+   "relation": "applicant",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "MC2",
+   "kind": "member",
+   "person_id": "person-c2",
+   "household_id": "family-c",
+   "relation": "spouse",
+   "joined_at": "2020-01-01T00:00:00"
+  },
+  {
+   "id": "DC1",
+   "kind": "document",
+   "household_id": "family-c",
+   "doc_kind": "identity",
+   "subject": "person-c1",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:10:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "DC2",
+   "kind": "document",
+   "household_id": "family-c",
+   "doc_kind": "residence",
+   "subject": "family-c",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:20:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  },
+  {
+   "id": "DC3",
+   "kind": "document",
+   "household_id": "family-c",
+   "doc_kind": "relation",
+   "subject": "family-c",
+   "issued_at": "2026-03-01T00:00:00",
+   "received_at": "2026-04-01T09:30:00",
+   "expires_at": "2027-03-01T00:00:00",
+   "issuer": "civic-office"
+  }
+ ]
+}

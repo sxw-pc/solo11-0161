@@ -1,0 +1,7 @@
+{"events":[
+{"id":"HD","kind":"household","household_id":"family-d","community":"ward-b","applied_at":"2026-04-01T09:00:00","residence_from":"2020-01-01T00:00:00","version":1},
+{"id":"MD1","kind":"member","person_id":"person-d1","household_id":"family-d","relation":"applicant","joined_at":"2020-01-01T00:00:00"},
+{"id":"DD1","kind":"document","household_id":"family-d","doc_kind":"identity","subject":"person-d1","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:10:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"},
+{"id":"DD2","kind":"document","household_id":"family-d","doc_kind":"residence","subject":"family-d","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:20:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"},
+{"id":"DD3","kind":"document","household_id":"family-d","doc_kind":"relation","subject":"family-d","issued_at":"2026-03-01T00:00:00","received_at":"2026-04-01T09:30:00","expires_at":"2027-03-01T00:00:00","issuer":"civic-office"}
+]}

@@ -1,0 +1,6 @@
+{"events":[
+{"id":"SW-0","kind":"switch","plan_id":"WIN-1-P1","segment_no":0,"at":"2026-04-03T18:00:00","witness":"field-tech-zhao","evidence":"switch-win1-p1-seg0.jpg"},
+{"id":"SW-1","kind":"switch","plan_id":"WIN-1-P1","segment_no":1,"at":"2026-04-03T18:05:00","witness":"field-tech-zhao","evidence":"switch-win1-p1-seg1.jpg"},
+{"id":"SW-2","kind":"switch","plan_id":"WIN-1-P1","segment_no":2,"at":"2026-04-03T18:10:00","witness":"field-tech-zhao","evidence":"switch-win1-p1-seg2.jpg"},
+{"id":"SW-3","kind":"switch","plan_id":"WIN-1-P1","segment_no":3,"at":"2026-04-03T18:15:00","witness":"field-tech-zhao","evidence":"switch-win1-p1-seg3.jpg"}
+]}

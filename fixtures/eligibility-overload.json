@@ -1,0 +1,6 @@
+{"events":[
+{"id":"ID1","kind":"income","household_id":"family-d","month":"2026-01","cents":100000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"ID2","kind":"income","household_id":"family-d","month":"2026-02","cents":100000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"ID3","kind":"income","household_id":"family-d","month":"2026-03","cents":100000,"issuer":"tax-office","at":"2026-04-01T10:00:00"},
+{"id":"PD","kind":"property","household_id":"family-d","area_m2":0,"effective_at":"2026-03-01T00:00:00","issuer":"registry","at":"2026-04-01T10:00:00"}
+]}

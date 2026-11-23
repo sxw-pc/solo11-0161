@@ -2,9 +2,12 @@ import hashlib
 import json
 from .store import connect,many
 from .source import ingest
-TABLES=['household','member','document','application_decision','income_check','property_check','objection','eligibility','queue_position','unit','offer','signature','allocation_dispute','power_reading','power_demand','decision_log']
+TABLES=['household','member','document','application_decision','income_check','property_check','objection','eligibility','queue_position','unit','offer','signature','allocation_dispute','power_reading','power_demand','battery','inverter','grid_event','device','delivery','dispatch_window','supply_plan','supply_segment','switch_witness','decision_log']
 def report(db):
     r={t:[dict(x) for x in many(db,f'SELECT * FROM {t} ORDER BY rowid')] for t in TABLES}
+    for seg in r['supply_segment']:
+        seg['powered_devices']=json.loads(seg['powered_devices'])
+        seg['unfulfilled']=json.loads(seg['unfulfilled'])
     r['event']=[dict(x) for x in many(db,'SELECT id,kind,sha FROM event ORDER BY rowid')]
     r['source_file']=[dict(x) for x in many(db,'SELECT id,command,sha FROM source_file ORDER BY id')]
     return r

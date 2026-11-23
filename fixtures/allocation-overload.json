@@ -1,0 +1,5 @@
+{"events":[
+{"id":"OV-U4","kind":"unit","community":"ward-b","rooms":1,"accessible":false,"available_at":"2026-04-01T11:00:00"},
+{"id":"O-D","kind":"offer","household_id":"family-d","unit_id":"OV-U4","offered_at":"2026-04-01T12:00:00","expires_at":"2026-04-02T12:00:00"},
+{"id":"S-D","kind":"sign","offer_id":"O-D","at":"2026-04-01T13:00:00","signer":"person-d1"}
+]}

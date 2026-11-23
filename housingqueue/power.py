@@ -1,19 +1,14 @@
-from .store import one, log
+from .store import one
+from . import dispatch
 
 
 def decide(db, community, event_id=None):
-    units = db.execute("SELECT id FROM unit WHERE community=? AND state='assigned'", (community,)).fetchall()
-    total = count = 0
-    for unit in units:
-        latest = one(db, 'SELECT kw_tenths FROM power_reading WHERE unit_id=? ORDER BY at DESC,id DESC LIMIT 1', (unit['id'],))
-        if latest:
-            total += latest['kw_tenths']
-            count += 1
-    state = 'measured' if count else 'pending'
-    db.execute('INSERT INTO power_demand(community,total_kw_tenths,reading_count,state) VALUES(?,?,?,?) ON CONFLICT(community) DO UPDATE SET total_kw_tenths=excluded.total_kw_tenths,reading_count=excluded.reading_count,state=excluded.state',
-               (community, total, count, state))
-    log(db, 'power', community, state, 'latest occupied-unit meter readings summed', event_id)
-    return state
+    """Sum the latest meter reading of every physically delivered occupied unit.
+
+    Signed-but-undelivered units are not counted as occupied loads. A community
+    without any reading stays 'pending': missing measurements are never zero.
+    """
+    return dispatch.recompute_demand(db, community, event_id)
 
 
 def reading(db, e):
@@ -22,4 +17,7 @@ def reading(db, e):
         raise ValueError('known unit and nonnegative measured demand required')
     db.execute('INSERT INTO power_reading(id,unit_id,at,kw_tenths,meter) VALUES(?,?,?,?,?)',
                (e['id'], e['unit_id'], e['at'], int(e['kw_tenths']), e['meter']))
-    return decide(db, unit['community'], e['id'])
+    state = decide(db, unit['community'], e['id'])
+    # later meter data may only touch segments that have not executed yet
+    dispatch.refresh_after_meter(db, unit['id'], e['at'], e['id'])
+    return state

@@ -54,6 +54,12 @@ def sign(db,e):
         db.execute("UPDATE household SET status='housed',reason='signed allocation fulfilled' WHERE id=?",(o['household_id'],))
         db.execute("INSERT INTO queue_position(household_id,rank,state,reason) VALUES(?,?,?,?)",(o['household_id'],0,'housed','signed unit allocation'))
         log(db,'application',o['household_id'],'housed','allocation changed household status',e['id'])
+        # a signed-but-undelivered unit is not yet an occupied load: recompute
+        # demand from delivered units and refresh only pending supply segments
+        from . import dispatch
+        unit_row=one(db,'SELECT community FROM unit WHERE id=?',(o['unit_id'],))
+        dispatch.recompute_demand(db,unit_row['community'],e['id'])
+        dispatch.refresh_after_occupancy(db,o['unit_id'],e['at'],e['id'])
     log(db,'allocation',o['id'],state,reason,e['id'])
     return state
 

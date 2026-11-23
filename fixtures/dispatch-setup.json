@@ -1,0 +1,10 @@
+{"events":[
+{"id":"BAT-1","kind":"battery","community":"ward-a","usable_wh":1500},
+{"id":"INV-1","kind":"inverter","community":"ward-a","limit_w":2000},
+{"id":"GRID-OFF-1","kind":"grid","community":"ward-a","at":"2026-04-03T18:00:00","state":"off","reason":"scheduled one-hour outage"},
+{"id":"DEV-U1","kind":"device","unit_id":"U1","label":"ventilator","critical":true,"power_w":1000,"interruptible":false,"consent":"none","window_start":"2026-04-03T18:00:00","window_end":"2026-04-03T19:00:00"},
+{"id":"DEV-U2","kind":"device","unit_id":"U2","label":"freezer","critical":false,"power_w":1000,"interruptible":true,"consent":"written","window_start":"2026-04-03T18:00:00","window_end":"2026-04-03T18:30:00"},
+{"id":"DEV-U3","kind":"device","unit_id":"U3","label":"water-pump","critical":false,"power_w":1000,"interruptible":true,"consent":"written","window_start":"2026-04-03T18:30:00","window_end":"2026-04-03T19:00:00"},
+{"id":"DLV-U1","kind":"delivery","offer_id":"O1","unit_id":"U1","at":"2026-04-03T12:00:00","witness":"ward-officer-li","evidence":"handover-u1-20260403.jpg"},
+{"id":"DLV-U2","kind":"delivery","offer_id":"O2","unit_id":"U2","at":"2026-04-03T12:05:00","witness":"ward-officer-li","evidence":"handover-u2-20260403.jpg"}
+]}
